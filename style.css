@@ -239,6 +239,9 @@ margin-top: 10px;
 }
 
 
+ 
+
+
 #product-rate{
     margin-top: 30px;
     font-size: medium;
@@ -343,22 +346,55 @@ body {
 
 /* --- Product Card Container --- */
 .product-card {
-    width: 300px; /* Adjust width as needed for your layout */
+    /* Set a specific, standard width for a card layout */
+    width: 280px; 
+    
     background-color: #ffffff;
     border-radius: 12px;
-    /* Adding a subtle box shadow for the 'floating' effect */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
-    overflow: hidden; /* Ensures image corners are rounded */
+    overflow: hidden; 
+    
+    /* Keep the height for consistent sizing */
+    height: 30rem;
+
+    /* 👇 Perfect Animation Addition: Transition property */
+    /* This prepares the element for a smooth animated change */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+
+
+/* --- Animation: Product Card Hover Effect --- */
+.product-card:hover {
+    /* 1. Lift the card up slightly (translateY) */
+    transform: translateY(-5px); 
+    
+    /* 2. Make the shadow more prominent */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* --- Image Styling --- */
 .product-image-container {
     width: 100%;
     /* Aspect ratio for the image, adjust as needed */
-    height: 350px; 
+    height: 250px; 
     overflow: hidden;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+
 }
 
 .product-image {
