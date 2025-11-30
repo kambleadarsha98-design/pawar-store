@@ -7,3 +7,15 @@ search.onclick =   function(){
 }
 
 
+
+let  noti  =  document.querySelector(".product") 
+
+noti.addEventListener("click", function(){
+
+    alert("out of  stock")
+})
+
+
+let  shopnow  =  document.querySelector("#shop-now"); 
+
+shopnow.herf = 'product.html';

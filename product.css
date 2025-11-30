@@ -337,3 +337,442 @@ a{
         order: 3; /* Move copyright below socials */
     }
 }
+
+
+
+/* --- Global Styles --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* --- Navigation Styles --- */
+.nav{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+}
+
+#search{
+    border: none;
+    outline: none;
+    background-color: white;
+    margin-left: 15px;
+    height: 30px;
+}
+
+#input{
+    visibility: hidden; /* Hidden by default */
+    width: 10rem;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+i{
+    font-size: 20px;
+    color: rgb(161, 74, 47);
+}
+
+#heading{
+    margin-left: 23rem; /* Large desktop margin */
+    color: rgb(161, 74, 47); 
+    font-weight: 400;
+    font-style: italic;
+    flex-grow: 1; /* Allows it to push other elements away */
+    text-align: center;
+}
+
+#cart{
+    margin-left: 5rem; 
+    color: rgb(161, 74, 47); 
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+ul{
+    display: flex;
+    margin-left: 18rem; /* Large desktop margin */
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    margin-left: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: inherit;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: rgb(161, 74, 47);
+}
+
+
+/* --- Product Grid Container --- */
+.product-grid {
+    display: grid;
+    /* Default: 4 columns for desktop */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* --- Product Card Styling --- */
+.product-card {
+    width: 100%; 
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    overflow: hidden; 
+    height: 450px; /* Fixed height for consistent look */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.product-image-container {
+    width: 100%;
+    height: 250px; 
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.product-details {
+    padding: 15px 15px 20px;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.product-details h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.rating-stars {
+    color: #ffc107; 
+    font-size: 0.8em;
+}
+
+.vendor-info {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.reviews-count {
+    font-size: 0.8em;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #333;
+}
+
+.status {
+    font-size: 0.8em;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Status Colors */
+.sold-out {
+    color: #ffffff;
+    background-color: #e91e63;
+}
+.new-arrival {
+    color: #ffffff;
+    background-color: #4CAF50;
+}
+.low-stock {
+    color: #ffffff;
+    background-color: #FF9800;
+}
+.trending {
+    color: #ffffff;
+    background-color: #2196F3;
+}
+.best-value {
+    color: #ffffff;
+    background-color: #9C27B0;
+}
+.available {
+    color: #ffffff;
+    background-color: #3F51B5;
+}
+
+
+/* --- Footer Styling --- */
+.alt-footer {
+    background-color:#121212; 
+    color: white; 
+    padding: 60px 20px 40px;
+    border-top: 1px solid #eeeeee; 
+    font-family: 'Arial', sans-serif;
+    border-radius: 15px 15px 0 0;
+    margin-top: 50px;
+}
+
+.footer-grid-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 40px;
+    text-align: left;
+}
+
+.footer-contact h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact-detail {
+    font-size: 0.95em;
+    margin: 5px 0;
+    color: white;
+}
+
+.social-icons-alt {
+    margin: 20px 0;
+}
+
+.social-icons-alt a {
+    color: white; 
+    font-size: 1.2em;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons-alt a:hover {
+    color: #e91e63; 
+}
+
+.copyright-alt {
+    font-size: 0.8em;
+    color: white;
+    margin-top: 30px;
+}
+
+.footer-navigation h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.nav-links-alt {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links-alt li {
+    margin-bottom: 8px;
+}
+
+.nav-links-alt a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-left: 0; /* Important reset */
+}
+
+.nav-links-alt a:hover {
+    color: #e91e63;
+}
+
+
+/* ========================================================= */
+/* ⭐️ RESPONSIVE DESIGN - MEDIA QUERIES ⭐️                   */
+/* ========================================================= */
+
+
+/* --- 1. Mobile Devices (Max Width 600px) --- */
+@media (max-width: 600px) {
+
+    /* --- Navigation Bar Adjustments --- */
+    .nav {
+        flex-direction: column; 
+        height: auto; 
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    /* Important resets for original large margins */
+    #heading, #cart {
+        margin-left: 0 !important; 
+    }
+
+    #heading {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        order: 1; 
+    }
+
+    #search {
+        order: 2; 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        margin-left: 0;
+    }
+
+    #input {
+        visibility: visible !important;
+        width: 100px;
+        margin-top: 0;
+        margin-left: 5px;
+    }
+
+    #cart {
+        order: 3;
+        margin-top: 5px;
+        font-size: 0.9rem;
+    }
+    
+    /* Hide main navigation on mobile */
+    ul {
+        display: none !important; 
+        margin-left: 0 !important; 
+    }
+
+    /* --- Product Grid Adjustments --- */
+    .product-grid {
+        /* Change from 4 columns to 2 columns */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+        padding: 20px 10px;
+    }
+    
+    .product-card {
+        height: 380px; /* Make cards slightly shorter */
+    }
+
+    .product-image-container {
+        height: 150px; /* Smaller image height */
+    }
+
+    .product-details h3 {
+        font-size: 1em;
+    }
+
+    .price {
+        font-size: 1.1em;
+    }
+
+    /* --- Footer Adjustments --- */
+    .footer-grid-container {
+        grid-template-columns: 1fr; 
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .footer-navigation {
+        margin-top: 20px;
+    }
+
+    .nav-links-alt {
+        align-items: center;
+    }
+}
+
+
+/* --- 2. Tablet Devices (Min 601px and Max Width 992px) --- */
+@media (min-width: 601px) and (max-width: 992px) {
+    
+    /* --- Navigation Bar Adjustments --- */
+    #heading {
+        margin-left: 10px !important;
+        font-size: 1.8rem;
+    }
+    
+    ul {
+        /* Display navigation */
+        display: flex !important;
+        margin-left: 2rem !important;
+    }
+
+    #cart {
+        margin-left: 2rem !important;
+    }
+
+    /* --- Product Grid Adjustments --- */
+    .product-grid {
+        /* Change from 4 columns to 3 columns */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px;
+        padding: 30px 15px;
+    }
+    
+    .product-card {
+        height: 400px;
+    }
+
+    .product-image-container {
+        height: 180px; 
+    }
+    
+    /* --- Footer Grid Adjustments --- */
+    /* Two columns remain, which works well for tablets */
+}
+
+
+/* --- 3. Large Desktops (Min 1200px) --- */
+@media (min-width: 1200px) {
+    /* Limit content width for very large screens */
+    body > * {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

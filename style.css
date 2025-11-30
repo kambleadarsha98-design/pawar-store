@@ -580,3 +580,307 @@ body {
         order: 3; /* Move copyright below socials */
     }
 }
+
+
+
+
+/* ========================================================= */
+/* ⭐️ REVISED & OPTIMIZED RESPONSIVE DESIGN (Media Queries) ⭐️ */
+/* These rules override your original fixed styles for smaller screens. */
+/* ========================================================= */
+
+
+/* --- 1. Mobile Devices (Max Width 600px) --- */
+@media (max-width: 600px) {
+
+    /* --- Navigation Bar Adjustments --- */
+    .nav {
+        /* Stack items vertically */
+        flex-direction: column; 
+        align-items: center; 
+        height: auto; 
+        padding: 10px 0;
+        width: 100%;
+        box-sizing: border-box; /* Crucial for preventing horizontal overflow */
+    }
+
+    /* Target original fixed-margin elements for reset */
+    #heading, #cart {
+        /* !important is used to ensure these responsive values override high-specificity original CSS */
+        margin-left: 0 !important; 
+    }
+
+    #heading {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        order: 1; 
+    }
+
+    #search {
+        order: 2; 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        margin-left: 0;
+    }
+
+    #input {
+        /* Make input visible on mobile if hidden initially */
+        visibility: visible !important;
+        width: 100px;
+        margin-top: 0;
+        margin-left: 5px;
+    }
+
+    #cart {
+        order: 3;
+        margin-top: 5px;
+        font-size: 0.9rem;
+    }
+    
+    /* Main Navigation Links (Hidden for Hamburger Menu) */
+    ul {
+        display: none !important; /* Force hide the main nav bar */
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+    }
+    
+    /* --- Main Content Adjustments --- */
+    
+    /* Force single column for all grid containers */
+    .container, .content2 {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+        margin: 20px 10px; 
+        padding: 0 5px;
+    }
+
+    .product {
+        /* Use two columns for product listings */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+        margin: 20px 5px;
+        padding: 0;
+    }
+    
+    /* Ensure card and image elements are flexible */
+    .product-card {
+        width: 100%; 
+        height: auto;
+    }
+    
+    .product-image-container {
+        height: 150px; /* Smaller image height for compact view */
+    }
+
+    /* Image Sizing and Centering */
+    #banner-image, #banner-image-2 {
+        width: 98%; /* Slightly less than 100% to keep margin */
+        height: auto;
+        margin: 10px auto; 
+    }
+    
+    #banner-image-1 {
+        /* Nested image needs small sizing */
+        width: 90%; 
+        height: auto;
+        margin: 10px auto;
+    }
+    
+    #redgirldress {
+        width: 95vw; 
+        height: auto;
+        margin: 20px auto;
+    }
+    
+    /* Text and Quote Adjustments */
+    #quite, #newarivals, #new-quite1, #new-quite2 {
+        margin-left: 0 !important; /* Resetting all fixed text margins */
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+    
+    marquee {
+        font-size: large;
+    }
+    
+    /* --- Footer Adjustments (from previous response) --- */
+    .footer-grid-container {
+        grid-template-columns: 1fr; 
+        text-align: center;
+        padding: 0 15px;
+    }
+    .nav-links-alt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+/* --- 2. Tablet Devices (Min 601px and Max Width 992px) --- */
+@media (min-width: 601px) and (max-width: 992px) {
+    
+    /* --- Navigation Bar Adjustments --- */
+    /* Adjust margins to be smaller but still separate elements */
+    #heading {
+        margin-left: 10px !important;
+        font-size: 1.8rem;
+    }
+    
+    ul {
+        margin-left: 2rem !important;
+    }
+
+    #cart {
+        margin-left: 2rem !important;
+    }
+    
+    /* --- Content Grid Adjustments --- */
+    .container {
+        /* 2-column layout for tablets */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        margin: 30px 15px;
+    }
+    
+    .product {
+        /* 3-column layout is a good balance for products */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 15px;
+        margin: 30px 15px;
+    }
+
+    /* Image Sizing */
+    #banner-image, #banner-image-2 {
+        width: 98%;
+        height: auto;
+        margin: 30px 1%;
+    }
+    
+    /* Footer Grid remains two columns for tablets */
+}
+
+
+/* --- 3. Large Desktops (Min 1200px) --- */
+@media (min-width: 1200px) {
+    /* Limit the maximum width of the entire page content */
+    body > * {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Ensure the navigation header also respects the max width */
+    .nav {
+        max-width: 1400px;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    /* Ensure the parent container is a single column first (already in the full responsive code) */
+    /* .content2 { grid-template-columns: 1fr; } */
+
+    /* The left container itself */
+    .left {
+        width: 100%; /* Take full width of its parent (.content2) */
+        padding: 10px 0;
+    }
+    
+    /* The specific image element */
+    #redgirldress {
+        /* Use viewport width for flexible sizing, and set height to auto */
+        width: 90vw !important; 
+        height: auto !important;
+        /* Center the image */
+        display: block;
+        margin: 20px auto !important;
+        /* Reduce the corner radius a little if it looks too extreme */
+        border-radius: 10px !important;
+    }
+}
+
+
+
+
+@media (min-width: 601px) and (max-width: 992px) {
+
+    /* The left container itself */
+    .left {
+        padding: 15px;
+    }
+
+    /* The specific image element */
+    #redgirldress {
+        /* Use a percentage of the column width */
+        width: 100% !important; 
+        height: auto !important;
+        /* Reset any large margins from the original CSS */
+        margin: 0 !important; 
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    /* Hide the entire list on mobile */
+    ul {
+        display: none !important; 
+        /* Reset original large margins */
+        margin-left: 0 !important; 
+        padding: 0;
+        width: 100%;
+    }
+
+    /* Optional: Ensure list items and links are also reset if needed */
+    li {
+        margin-left: 0 !important;
+    }
+    a {
+        margin-left: 0 !important;
+    }
+}
+
+
+
+
+@media (min-width: 601px) and (max-width: 992px) {
+    /* Make sure the list is visible and uses flexible display (row) */
+    ul {
+        display: flex !important;
+        /* Reduce the large margin-left from the original CSS */
+        margin-left: 2rem !important;
+        margin-top: 20px !important;
+        padding: 0;
+    }
+
+    /* Adjust the spacing between individual links */
+    li {
+        margin-left: 30px !important; /* Smaller spacing between links */
+    }
+    
+    a {
+        margin-left: 0 !important; /* Links within list items shouldn't have a huge margin */
+    }
+}
+
+
+
+
+@media (min-width: 993px) {
+    /* Ensure list is visible and horizontal */
+    ul {
+        display: flex !important;
+        /* Revert to your original large margin for desktop spacing, or use a slightly smaller value */
+        margin-left: 18rem; 
+        margin-top: 30px;
+    }
+}
